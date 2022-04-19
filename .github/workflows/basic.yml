@@ -29,7 +29,6 @@ env:
   AWS_SECURITY_GROUP_ID: ${{ secrets.AWS_SECURITY_GROUP_ID }}
   AWS_SUBNET_ID: ${{ secrets.AWS_SUBNET_ID }}
   AWS_AMI_ID: ami-05b2419048ed03b72
-  PIP_INDEX_URL: https://pypi.tuna.tsinghua.edu.cn/simple
 jobs:
   ci_test:
     runs-on: ubuntu-latest
@@ -53,7 +52,10 @@ jobs:
 
     - name: Run tests
       id: avh
+      env:
+        PIP_INDEX_URL: https://pypi.tuna.tsinghua.edu.cn/simple
       run: |
+        env
         avhclient -b aws execute --specfile basic/avh.yml
 
     - name: Archive results
