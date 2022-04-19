@@ -46,7 +46,7 @@ jobs:
 
     - name: Install AVH Client for Python
       run: |
-        pip install git+https://github.com/ARM-software/avhclient.git@add_endpoint_to_s3
+        pip install git+https://github.com/ARM-software/avhclient.git@main
 
     - uses: ammaraskar/gcc-problem-matcher@master
 
