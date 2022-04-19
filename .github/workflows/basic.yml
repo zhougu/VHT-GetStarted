@@ -29,6 +29,7 @@ env:
   AWS_SECURITY_GROUP_ID: ${{ secrets.AWS_SECURITY_GROUP_ID }}
   AWS_SUBNET_ID: ${{ secrets.AWS_SUBNET_ID }}
   AWS_AMI_ID: ami-05b2419048ed03b72
+  PIPENV_PYPI_MIRROR: https://pypi.tuna.tsinghua.edu.cn/simple
 jobs:
   ci_test:
     runs-on: ubuntu-latest
