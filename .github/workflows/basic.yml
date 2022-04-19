@@ -26,6 +26,7 @@ env:
   AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
   AWS_S3_BUCKET_NAME: ${{ secrets.AWS_S3_BUCKET_NAME }}
   AWS_IAM_PROFILE: ${{ secrets.AWS_IAM_PROFILE }}
+  AWS_AMI_ID: ami-0a27a662d8e933490
   AWS_SECURITY_GROUP_ID: ${{ secrets.AWS_SECURITY_GROUP_ID }}
   AWS_SUBNET_ID: ${{ secrets.AWS_SUBNET_ID }}
 jobs:
@@ -38,10 +39,10 @@ jobs:
     - name: Check out repository code
       uses: actions/checkout@v3
 
-    - name: Set up Python 3.8
+    - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'
+        python-version: '3.10'
 
     - name: Install AVH Client for Python
       run: |
