@@ -64,8 +64,8 @@ jobs:
       with:
         name: results
         path: |
-          basic/basic.axf
-          basic/basic.axf.map
+          basic/Objects/basic.axf
+          basic/Objects/basic.axf.map
         retention-days: 1
         if-no-files-found: error
       if: always()
